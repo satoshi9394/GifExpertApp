@@ -31,7 +31,4 @@ describe('Pruebas en <GifGridItem />', () => {
     expect( classFound ).toBe('animate__fadeIn');
   })
   
-  
-  
-  
 })
