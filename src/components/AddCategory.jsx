@@ -7,6 +7,7 @@ const AddCategoris = ({ setCategories }) => {
   const handleInpuntChanges = ( e ) => {
     const newValue = e.target.value;
     setinputValue(newValue)
+    console.log('llamado el handleInpuntChanges')
   } 
   const handleSubmit = (e) => {
     e.preventDefault();
