@@ -7,10 +7,10 @@ const AddCategoris = ({ setCategories }) => {
   const handleInpuntChanges = ( e ) => {
     const newValue = e.target.value;
     setinputValue(newValue)
-    console.log('llamado el handleInpuntChanges')
   } 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log('handleSubmit fue llamado', inputValue)
     if ( inputValue.trim().length > 2 ) {
       setCategories(cats => [ inputValue, ...cats ]);
       setinputValue('');
