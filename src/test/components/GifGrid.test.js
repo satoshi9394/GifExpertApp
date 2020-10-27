@@ -22,14 +22,21 @@ describe('Pruebas en <GifGrid />', () => {
       id: 'ABC',
       url: 'https://localhost/img.jpg',
       title: 'goku'
-    }]
+    },
+    {
+      id: '123',
+      url: 'https://localhost/img2.jpg',
+      title: 'vegeta'
+    }];
     useFetchGifs.mockReturnValue({
       data: gifs,
       loading: false
-    })
+    });
     
     const wrapper = shallow( <GifGrid category={category} /> );
     expect( wrapper ).toMatchSnapshot();
+    expect( wrapper.find('p').exists() ).toBe(false);
+    expect( wrapper.find('GifGridItem').length ).toBe( gifs.length );
   });
 
 })
