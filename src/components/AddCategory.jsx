@@ -10,7 +10,7 @@ const AddCategoris = ({ setCategories }) => {
   } 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('handleSubmit fue llamado', inputValue)
+    // para pruebas console.log('handleSubmit fue llamado', inputValue)
     if ( inputValue.trim().length > 2 ) {
       setCategories(cats => [ inputValue, ...cats ]);
       setinputValue('');
